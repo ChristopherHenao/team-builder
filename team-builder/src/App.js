@@ -46,13 +46,10 @@ function App() {
 
   const submitForm = () => {
     const newMember = {
-      username: formValues.name.trim(),
+      name: formValues.name.trim(),
       email: formValues.email.trim(),
       role: formValues.role.trim(),
     }
-    if (!newMember.name || !newMember.email || !newMember.role) 
-    return
-    
     const memberFromBackend = newMember;
     setTeamMembers([memberFromBackend, ...teamMembers])
     setFormValues(initialFormValues)
